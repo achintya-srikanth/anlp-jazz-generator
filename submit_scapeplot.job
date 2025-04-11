@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#SBATCH --job-name=scapeplot
+#SBATCH -A cis250010p
+#SBATCH --partition=GPU-shared
+#SBATCH --gres=gpu:v100-16:1
+#SBATCH --time=2:00:00
+#SBATCH --output=logs/scapeplot.out
+#SBATCH --error=logs/scapeplot.err
+#SBATCH --mail-type=ALL  # Send email on job BEGIN, END, and FAIL
+#SBATCH --mail-user=guantonz@andrew.cmu.edu
+
+# Load required modules
+module load anaconda3
+
+conda activate metric_env
+
+# Run the training script
+cd metrics/MusDr/
+
+python run_python_scapeplot.py \
+    -a music/music_a  \
+    -s music/music_ssm   \
+    -p music/music_p
