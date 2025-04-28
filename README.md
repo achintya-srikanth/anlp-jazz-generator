@@ -1,4 +1,4 @@
-# Jazz Music Generator Using Transformer Architecture
+# Enhancing the Jazz Music Generator Using Residual Vector Quantization
 ## Achintya Srikanth, Guantong Zhang, Aaditya Nair
 A transformer model to generate jazz music (inspired by Wu et al, 2020).
 This repository replicates the results of Wu, et al (https://arxiv.org/pdf/2008.01307). It combines the original repository with the metrics pipeline from the GitHub 'https://github.com/slSeanWU/MusDr/'.
